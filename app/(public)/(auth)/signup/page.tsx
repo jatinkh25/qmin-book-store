@@ -182,7 +182,14 @@ export default function Signup() {
                   />
                 </div>
                 <Button disabled={formik.isSubmitting}>
-                  {formik.isSubmitting && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
+                  {formik.isSubmitting ? (
+                    <>
+                      <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                      <span>Creating account...</span>
+                    </>
+                  ) : (
+                    <span>Sign Up</span>
+                  )}
                   Sign Up
                 </Button>
               </div>

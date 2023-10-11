@@ -115,8 +115,14 @@ export default function Login() {
                 />
               </div>
               <Button disabled={formik.isSubmitting} type="submit">
-                {formik.isSubmitting && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
-                Sign In with Email
+                {formik.isSubmitting ? (
+                  <>
+                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                    <span>Signing In...</span>
+                  </>
+                ) : (
+                  <span>Sign In with Email</span>
+                )}
               </Button>
             </div>
           </form>

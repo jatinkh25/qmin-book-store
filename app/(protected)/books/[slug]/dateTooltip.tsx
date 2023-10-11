@@ -8,7 +8,10 @@ export default function DateTooltip({ content }: { content: string }) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant="outline" className="text-xs px-3 py-1 rounded-full h-auto">
+          <Button
+            variant="outline"
+            className="text-xs px-3 py-1 rounded-full h-[26px] flex-shrink-0"
+          >
             {content}
           </Button>
         </TooltipTrigger>

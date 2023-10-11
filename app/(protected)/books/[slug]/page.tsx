@@ -13,14 +13,14 @@ export default async function BookDetails({ params }: BookDetailsProps) {
   const book = await getBookDetails(params.slug)
 
   return (
-    <div className="flex-1 space-y-4 p-4 pt-3 sm:p-8 sm:pt-6 w-full min-h-visible">
+    <div className="flex-1 space-y-4 p-4 sm:p-8 pt-6 w-full min-h-visible">
       <div className="flex items-center justify-between space-y-2 w-full">
         <h2 className="text-3xl font-bold tracking-tight">Book Details</h2>
       </div>
 
-      <div className="sm:min-h-visible-book flex items-center justify-center">
-        <Card className="w-full sm:w-96">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+      <div className="min-h-visible-book flex items-center justify-center">
+        <Card className="w-full sm:max-w-md">
+          <CardHeader className="flex gap-2 flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-lg font-bold">{book.name}</CardTitle>
             <DateTooltip content={book.datePublished} />
           </CardHeader>
