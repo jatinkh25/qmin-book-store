@@ -9,10 +9,10 @@ const privateAPI = axios.create({
   baseURL: SERVER_URL,
 })
 
-// privateAPI.interceptors.request.use((config) => {
-//   const newConfig = { ...config }
-//   newConfig.headers.Authorization = `Bearer ${localStorage.getItem('access_token')}`
-//   return newConfig
-// })
+privateAPI.interceptors.request.use((config) => {
+  const newConfig = { ...config }
+  newConfig.headers.Authorization = `Bearer ${localStorage.getItem('access_token')}`
+  return newConfig
+})
 
 export { publicAPI, privateAPI }
