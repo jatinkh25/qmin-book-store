@@ -1,4 +1,4 @@
-import { privateAPI, publicAPI } from '@/utils/axios'
+import { publicAPI } from '@/utils/axios'
 import { Book } from '@/utils/types'
 
 export const getBooks = async () => {
