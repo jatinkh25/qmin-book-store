@@ -190,7 +190,6 @@ export default function Signup() {
                   ) : (
                     <span>Sign Up</span>
                   )}
-                  Sign Up
                 </Button>
               </div>
             </form>
